@@ -73,7 +73,7 @@ const words = [
         let ownname = ["Hey, Welcome.", "I'm kishan", "I'm happy to see you here"]
         typeText(ownname, "ownname");
 //ytcard 
-function div(he, p){
+function div(he, p, time){
 let lang = document.getElementById("lang");
 let card = document.createElement("div");
 let para = document.createElement("p");
@@ -81,7 +81,9 @@ let head = document.createElement("h1");
 
 head.textContent = he;
 para.textContent = p;
-card.classList.add("card");
+
+
+card.classList.add("card", "boxshadow", "textshadow");
 
 card.appendChild(head)
 card.appendChild(para)
@@ -91,15 +93,30 @@ lang.appendChild(card)
 lang = [
   { "name": "HTML", "info": "THIS IS HTML" },
   { "name": "CSS", "info": "THIS IS CSS" },
-  { "name": "JAVASCRIPT", "info": "THIS IS JAVASCRIPT" }
+  { "name": "JAVASCRIPT", "info": "THIS IS JAVASCRIPT" },
+  {"name":"PYTHON", "info":"THIS IS PY"}
 ];
-
-for(var i = 0; i <= lang.length; i++){
-
+for(var i = 0; i < lang.length; i++){ 
 div(lang[i].name, lang[i].info)
-
 }
-function updateBotInfo() {
+
+// Get references to the button and body elements
+const darkThemeButton = document.getElementById('dark-theme-button');
+const body = document.body;
+
+// Add a click event listener to the button
+darkThemeButton.addEventListener('click', () => {
+    // Toggle the 'dark-theme' class on the body element
+      var computedStyle = getComputedStyle(body);
+var bodyColor = computedStyle.backgroundColor;
+      if(bodyColor === "rgb(255, 255, 255)"){
+      darkThemeButton.textContent = "White Theme"
+      } else {
+       darkThemeButton.textContent = "Dark Theme"
+      }
+    body.classList.toggle('dark-theme');
+    
+    function updateBotInfo() {
       fetch('/api/bot-info')
         .then(response => response.items)
         .then((data) => {
@@ -108,6 +125,7 @@ function updateBotInfo() {
 }
 updateBotInfo();
 
+});
  
 
 

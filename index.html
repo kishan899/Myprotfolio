@@ -12,70 +12,37 @@
   html, body {
     height: 100vh;
     margin: 0;
-    padding: 0; /* Add this line to remove default body padding */
-    display: flex;
-    flex-direction: column; /* To stack the header and content vertically */
-  
+    padding: 0;
+    background-color: #f0f0f0; /* Optional background color */
+    
+}
+/* Dark theme styles */
+body.dark-theme {
+  height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Optional background color */
+    
+
 }
 
- 
-.main{
-  
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
+*/
 
-.fa {
-padding: 20px;
-text-align: center;
-margin: 5px 2px;
-font-size: 30px;
-width: 50px;
-}
-.fa-facebook {
-background: #3B5998;
-color: white;
-}
-.fa-twitter {
-background: #55ACEE;
-color: white;
-}
-.fa-pinterest {
-background: #cb2027;
-color: white;
-}
-.fa-linkedin {
-background: #007bb5;
-color: white;
-}
-.fa-instagram {
-background: #125688;
-color: white;
-}
-.fa-youtube {
-background: #bb0000;
-color: white;
-}
-.fa-google {
-background: #dd4b39;
-color: white;
-}
-.fa-snapchat-ghost {
-background: #fffc00;
-color: white;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.fa-skype {
-background: #00aff0;
-color: white;
-}
-.fa:hover {
-opacity: 0.9;
-}
+
       .navbar {
+          position: relative;
             background-color: darkgrey;
             max-width: 1000px;
-            height: 50px;
-            padding: 5px;
+            height: 60px;
+            padding: 20px;
             box-shadow: 2px 2px 5px lightslategrey;
+            margin: 0px;
+            
       }
 
         .navbar-left {
@@ -96,7 +63,7 @@ opacity: 0.9;
             text-shadow: 1px 1px 4px black;
         }
 
-        .navbar select {
+        .navbar button {
             background-color: gray;
             color: #ffffff;
             border: 2px solid black;
@@ -124,13 +91,23 @@ opacity: 0.9;
           box-shadow: 2px 2px 5px lightslategrey;
         }
         */
+        .boxshadow {
+         box-shadow: 2px 2px 5px lightslategrey; 
+        }
+        .textshadow h1{
+          text-shadow: 2px 2px 3px gray;
+        }
+          .textshadow p {
+            
+          text-shadow: 2px 2px 3px gray;
+        }
   .mycard {
   position: absolute;
   left: 50%;
-  top: 80px;
+  top: 110px;
   transform: translateX(-50%);
   background-color: white;
-  width: 80%; /* Adjust the width as needed */
+  width: 90%; /* Adjust the width as needed */
   max-width: 600px; /* Set a maximum width */
   height: 300px;
   border-radius: 8px;
@@ -162,6 +139,7 @@ opacity: 0.9;
          font-family: 'Courier New';
          text-shadow: 1px 1px 3px lightslategrey;
          font-size: 25px;
+         text-color: green;
         }
         /*.mycard a{
           position: relative;
@@ -248,7 +226,7 @@ opacity: 0.9;
        padding-bottom: 5px;
        transform: translateX(-50%);
        background-color: white;
-       width: 80%; 
+       width: 90%; 
        max-width: 600px;
        max-height: 1000px;
        border-radius: 8px;
@@ -261,6 +239,8 @@ opacity: 0.9;
           font-weight: bold;
           color: black;
           text-shadow: 2px 2px 5px lightslategrey;
+          position: relative;
+          top: 10px;
         }
         
         .about h2{
@@ -333,7 +313,7 @@ opacity: 0.9;
             padding: 20px;
         }
 
-        p {
+       .container p {
             font-family: 'Courier New';
             font-size: 20px;
             line-height: 1.5;
@@ -341,41 +321,58 @@ opacity: 0.9;
             padding: 5px;
             text-shadow: 0 0 15px rgba(127, 253, 48, 0.8);
             
-        }  
+        }
         
         .lang{
           display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
           position: relative;
           left: 50%;
           top: 350px;
-         transform: translateX(-50%);
+          padding-bottom: 5px;
+          transform: translateX(-50%);
           background-color: white;
-          max-width: 320px;
-          max-height: 500px;
-          border: 2px solid black;
+          width: 90%; 
+          max-width: 600px;
+          max-height: 1000px;
           border-radius: 8px;
-          box-shadow: 1px 1px 5px gray;
+          box-shadow: 2px 2px 5px lightslategrey;
+          padding: 4px;
         }
-        .card{
-          
+        .card{ 
           position: relative;
-          top: 80px
-          transform: translate(-50%, -50%);
+          left: 10px;
+          transform: translateX(-50%, -50%);
+          overflow: hidden;
           text-color: black;
           border: 2px solid black;
-          max-height: 200px;
-          margin: 20px;
+          border-radius: 8px;
+          width: calc(33.33% - 10px);
+          max-width: 150px;
+          padding: 10px;
+          margin: 10px;
           
         }
         .card h1{
+          text-align: center;
           position: relative;
-          font-size: 20px;
+          font-size: 15px;
+          font-weight: bold;
+          
         }
         .card p{
           position: relative; 
           font-size: 10px;
+          font-color: black;
+          text-align: center;
         }
-        
+        .menu-icon {
+display: hidden;
+width: 20px;
+height: 20px;
+background: <a href="http://tinypic.com?ref=261kfht" target="_blank">     <img src="http://i68.tinypic.com/261kfht.jpg" border="0" alt="Image and video hosting by TinyPic"></a> center;
+}
             
   </style>
   <body>
@@ -386,11 +383,14 @@ opacity: 0.9;
             <a href="#" id="ownname">KISHAN</a>
         </div>
         <div class="navbar-right">
-            <select size="1px">
+      <!--      <select size="1px">
                 <option value="option">SOCIAL</option></option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
             </select>
+            -->
+            <button id="dark-theme-button">Dark Theme</button>
+
         </div>
     </div>
       </header>
@@ -442,11 +442,14 @@ opacity: 0.9;
      <div class="container">
         <p id="typing"></p>
     </div>
+    
        </div>
        </div>
        
        <div class="lang" id="lang">
          
+           
+         </div>
          
        </div>
        </div>
