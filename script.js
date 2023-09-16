@@ -72,8 +72,17 @@ const words = [
         typeText(words, "typing");
         let ownname = ["Hey, Welcome.", "I'm kishan", "I'm happy to see you here"]
         typeText(ownname, "ownname");
-        
-        
-    /*    const videos = YouTube.search("playing with fire", { limit: 3 });
-console.log(videos.map((m, i) => `[${++i}] ${m.title} (${m.url})`).join("\n"));
-*/
+
+function updateBotInfo() {
+      fetch('/api/bot-info')
+        .then(response => response.items)
+        .then((data) => {
+        console.log(data);
+        });
+}
+updateBotInfo();
+
+ 
+
+
+
