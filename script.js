@@ -23,8 +23,8 @@ function typeAndClear(sentences) {
 }
 
 const sentences = [
-  "HTML IS GOOD LANGUAGE",
-  "CSS",
+  "HTML IS GOOD LANGUAGE, AND EASY TO UNDERSTAND",
+  "CSS IS ALSO A POPULAR LANGUAGE",
   "JAVASCRIPT"
 ];
 
@@ -70,34 +70,35 @@ const words = [
         }
 
         typeText(words, "typing");
-        let ownname = ["Hey, Welcome.", "I'm kishan", "I'm happy to see you here"]
+        let ownname = ["HEY, WELCOME", "I'M KISHAN", "I'M VERY HAPPY TO SEE YOU HERE"]
         typeText(ownname, "ownname");
 //ytcard 
-function div(he, p, time){
+function div(he, p, icon){
 let lang = document.getElementById("lang");
 let card = document.createElement("div");
 let para = document.createElement("p");
 let head = document.createElement("h1");
-
+let icons = document.createElement("ion-icon");
+icons.setAttribute("name", icon);
 head.textContent = he;
 para.textContent = p;
 
 
 card.classList.add("card", "boxshadow", "textshadow");
-
+card.appendChild(icons)
 card.appendChild(head)
 card.appendChild(para)
 lang.appendChild(card)
 }
 
 lang = [
-  { "name": "HTML", "info": "THIS IS HTML" },
-  { "name": "CSS", "info": "THIS IS CSS" },
-  { "name": "JAVASCRIPT", "info": "THIS IS JAVASCRIPT" },
-  {"name":"PYTHON", "info":"THIS IS PY"}
+  { "name": "HTML", "info": "THIS IS HTML", "icon":"logo-html5"},
+  { "name": "CSS", "info": "THIS IS CSS", "icon":"logo-css3"},
+  { "name": "JAVASCRIPT", "info": "THIS IS JAVASCRIPT", "icon":"logo-javascript"},
+  {"name":"PYTHON", "info":"THIS IS PY", "icon":"logo-python"}
 ];
 for(var i = 0; i < lang.length; i++){ 
-div(lang[i].name, lang[i].info)
+div(lang[i].name, lang[i].info, lang[i].icon)
 }
 
 // Get references to the button and body elements
