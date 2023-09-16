@@ -72,7 +72,33 @@ const words = [
         typeText(words, "typing");
         let ownname = ["Hey, Welcome.", "I'm kishan", "I'm happy to see you here"]
         typeText(ownname, "ownname");
+//ytcard 
+function div(he, p){
+let lang = document.getElementById("lang");
+let card = document.createElement("div");
+let para = document.createElement("p");
+let head = document.createElement("h1");
 
+head.textContent = he;
+para.textContent = p;
+card.classList.add("card");
+
+card.appendChild(head)
+card.appendChild(para)
+lang.appendChild(card)
+}
+
+lang = [
+  { "name": "HTML", "info": "THIS IS HTML" },
+  { "name": "CSS", "info": "THIS IS CSS" },
+  { "name": "JAVASCRIPT", "info": "THIS IS JAVASCRIPT" }
+];
+
+for(var i = 0; i <= lang.length; i++){
+
+div(lang[i].name, lang[i].info)
+
+}
 function updateBotInfo() {
       fetch('/api/bot-info')
         .then(response => response.items)

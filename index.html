@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
   html, body {
@@ -20,6 +21,54 @@
  
 .main{
   
+}
+
+.fa {
+padding: 20px;
+text-align: center;
+margin: 5px 2px;
+font-size: 30px;
+width: 50px;
+}
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+.fa-pinterest {
+background: #cb2027;
+color: white;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+.fa-instagram {
+background: #125688;
+color: white;
+}
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+.fa-google {
+background: #dd4b39;
+color: white;
+}
+.fa-snapchat-ghost {
+background: #fffc00;
+color: white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-skype {
+background: #00aff0;
+color: white;
+}
+.fa:hover {
+opacity: 0.9;
 }
       .navbar {
             background-color: darkgrey;
@@ -193,9 +242,10 @@
           box-shadow: 1px 1px 5px lightslategrey;
         }
         .about{
-       position: absolute;
+       position: relative;
        left: 50%;
-       top: 400px;
+       top: 330px;
+       padding-bottom: 5px;
        transform: translateX(-50%);
        background-color: white;
        width: 80%; 
@@ -292,6 +342,40 @@
             text-shadow: 0 0 15px rgba(127, 253, 48, 0.8);
             
         }  
+        
+        .lang{
+          display: flex;
+          position: relative;
+          left: 50%;
+          top: 350px;
+         transform: translateX(-50%);
+          background-color: white;
+          max-width: 320px;
+          max-height: 500px;
+          border: 2px solid black;
+          border-radius: 8px;
+          box-shadow: 1px 1px 5px gray;
+        }
+        .card{
+          
+          position: relative;
+          top: 80px
+          transform: translate(-50%, -50%);
+          text-color: black;
+          border: 2px solid black;
+          max-height: 200px;
+          margin: 20px;
+          
+        }
+        .card h1{
+          position: relative;
+          font-size: 20px;
+        }
+        .card p{
+          position: relative; 
+          font-size: 10px;
+        }
+        
             
   </style>
   <body>
@@ -321,7 +405,7 @@
          <a href="www.google.com" class="button">Let's Talk</a>
           
            <div class="profile">
-          <img src="https://media.discordapp.net/attachments/943360078986235944/1152244468330790923/IMG_3500.jpg" alt="myfutu">
+          <img src="IMG_8734.jpeg" alt="myfutu">
         </div>
         </div>
         
@@ -360,8 +444,9 @@
     </div>
        </div>
        </div>
-       <div>
-         Yt link 
+       
+       <div class="lang" id="lang">
+         
          
        </div>
        </div>

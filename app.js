@@ -4,7 +4,7 @@ const youtube = new Client();
 const app = express()
 app.get('/api/bot-info', async (req, res) => {
   
-    const videos =  youtube.search("Hanuman chalisha", {
+    const videos =  await youtube.search("Hanuman chalisha", {
         type: "video", // video | playlist | channel | all
     });
 videos.then((respone) => {
