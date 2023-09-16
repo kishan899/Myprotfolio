@@ -1,34 +1,10 @@
-function typeAndClear(sentences) {
-  const letterElement = document.getElementById("learn");
-  const delay = 500; // 1-second delay
-  let sentenceIndex = 0;
-
-  async function typeSentence(sentence) {
-    for (let char of sentence) {
-      letterElement.textContent += char;
-      await new Promise(resolve => setTimeout(resolve, delay));
-    }
-    await new Promise(resolve => setTimeout(resolve, delay));
-    letterElement.textContent = "";
-  }
-
-  async function typeAndClearAll() {
-    while (true) {
-      await typeSentence(sentences[sentenceIndex]);
-      sentenceIndex = (sentenceIndex + 1) % sentences.length;
-    }
-  }
-
-  typeAndClearAll();
-}
 
 const sentences = [
   "HTML IS GOOD LANGUAGE, AND EASY TO UNDERSTAND",
   "CSS IS ALSO A POPULAR LANGUAGE",
   "JAVASCRIPT"
 ];
-
-typeAndClear(sentences);
+typeText(sentences, "learn")
 
 const words = [
 "Hello, I'm Kishan, a 12th-grade student on an exciting journey into the world of web development. My current focus is on mastering JavaScript, HTML, CSS, and GitHub. Exploring the endless possibilities of web development has been a thrilling adventure, and I can't wait to see where it takes me!"
