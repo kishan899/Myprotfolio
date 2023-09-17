@@ -15,8 +15,8 @@
     border: border-box;
   }
   html, body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     background-color: white; /* Optional background color */
@@ -74,25 +74,20 @@ body.dark-theme {
         }
 
         .themebutton{
-          position: absolute;
-          right: 30px;
-          width: 10px;
-          height: 10px;
-          margin: 0 auto;
-          background-color: transparent;
-          border: 1px solid red;
-          border-radius: 60px;
-          padding: 23px;
+            float: right;
+            position: fixed;
+            right: 30px;
+           bottom: 30px;
+           background-color: transparent;
+           border: 0;
+           
         }
         .themebutton i {
-          display: flex;
-         position: relative;
-         bottom: 14px;
-  justify-content: center; /* Center horizontally */
-  align-items: center;
-         font-size: 30px;
+         font-size: 40px;
           margin: 0 auto;
-          color: red;
+          color: black;
+          opacity: 0.50;
+          text-shadow: 1px 1px 40px yellow;
         }
         
       /*  .mycard {
@@ -118,35 +113,35 @@ body.dark-theme {
           text-shadow: 2px 2px 3px gray;
         }
   .mycard {
+    display: flex;
   position: relative;
-  left: 50%;
-  top: 40px;
-  transform: translateX(-50%);
-  background-color: white;
-  width: 90%; /* Adjust the width as needed */
- max-width: 600px; 
-  max-height: 600px;
-  border-radius: 8px; 
-  box-shadow: 2px 2px 5px lightslategrey;
+       margin: 0 auto;
+       border-radius: 8px;
+       box-shadow: 2px 2px 5px lightslategrey;
+       width: 90%;
+       background-color: white;
+       top: 30px;
+       justify-content: space;
+       height: 400px;
 }
         .mycard p{
           margin: 0;
           position: relative;
-          top: 90px;
-          left: 30px;
+          top: 15%;
+          left: 9%;
           padding: 5px;
           color: black;
           font-family: "Courier New";
-          font-size: 20px;
-          text-shadow: 1px 1px 2px lightslategrey;
-          width: 200px;
+          font-size: 200%;
+          
         }
 
         .mycard h2{
-         position: relative;
-         top: 80px;
-         left: 8%;
-         max-width: 100px;
+          display: flex;
+          position: absolute;
+          top: 25%;
+         margin-left: 10%;
+         max-width: 30%;
          font-family: 'Courier New';
          text-shadow: 1px 1px 3px lightslategrey;
          font-size: 20px;
@@ -154,63 +149,48 @@ body.dark-theme {
         }
         .mycard h1{
           position: absolute;
-          margin: 0 auto;
-          left: 40%;
-          top: 10px;
+         left: 40%;
+         right: 50%;
+         margin-top: 1%;
           color: black;
           font-family: 'Fjalla One', sans-serif;
           text-shadow: 1px 1px 3px lightslategrey;
-          font-size: 25px;
+          font-size: 200%;
      
           
         }
         .mycard img{
-          
-          display: block;
-          margin: 0 auto;
-          bottom: 20px;
-          max-width: 150px;
-          max-height: 150px;
-          position: relative;
-          left: 30%;
+          display: flex;
+          margin: 0;
+          position: absolute;
+          right: 0;
+          top: 13%;
+          right: 8%;
+          height: 65%;
+          width: 40%;
           border: 2px solid gray;
           border-radius: 8px;
           box-shadow: 2px 2px 5px gray;
           
         }
-    
-        /*.mycard a{
-          position: relative;
-          float: right;
-          padding: 4px;
-          top: 240px;
-          right: 50px;
-          color: whitesmoke;
-          border: 2px solid dimgrey;
-          background-color: grey;
-          text-decoration: none;
-          font-weight: bold;
-          border-radius: 8px;
-          box-shadow: 2px 2px 5px lightslategrey;
-          
-        } */
+
         .socialcard{
           display: flex;
-          position: relative;
-          left: 20px;
-          bottom: 20px;
-
-          width: 180px;
+          position: absolute;
+          margin: 0 auto;
+          bottom: 0;
+          margin-bottom: 3%;
+          left: 25%;
+          width: 50%;
           height: 30px;
           font-size: 40px;
-
         }
         .socialcard a{
           display: flex;
           margin: 0 auto;
           position: relative;
           bottom : 4px;
-          
+          justify-content: space-evenly;
         }
         .socialcard a:nth-child(1){
           color: red;
@@ -225,6 +205,10 @@ body.dark-theme {
           color: cornflowerblue;
           animation: bounce 3s infinite;
           
+        }
+        .socialcard img{
+          height: 100px;
+          width: 40px;
         }
 
 @keyframes bounce {
@@ -249,17 +233,14 @@ body.dark-theme {
         }*/
         .about{
        position: relative;
-       left: 50%;
-       top: 50px;
-       padding-bottom: 5px;
-       transform: translateX(-50%);
-       background-color: white;
-       width: 90%; 
-       max-width: 600px;
-       max-height: 1000px;
+       margin: 0 auto;
        border-radius: 8px;
        box-shadow: 2px 2px 5px lightslategrey;
-        }
+       width: 90%;
+       background-color: white;
+       top: 90px;
+       padding-bottom: 20px;
+       }
         .about h1{
           position: relative;
           top: 10px;
@@ -273,56 +254,40 @@ body.dark-theme {
           text-shadow: 2px 2px 5px lightslategrey;
          
         }
-        
-        .aboutq{
-          position: relative;
-          left: 10px;
-          font-weight: bold;
-          line-height: 2.5;
-          text-shadow: 2px 2px 3px gray;
-          color: mintcream;
-          width: 150px;
-          height: 150px;
-          font-size: 13px;
-        }
-        .abouta{
-          position: relative;
-          right: 8px;
-          bottom: 150px;
-          float: right;
-          font-family: 'Courier New';
-          line-height: 2.5;
-          text-shadow: 2px 2px 3px gray;
-          font-size: 13px;
-          color: mintcream;
-        }
-        .aboutcard{
-          border: 2px solid gray;
+       .aboutcard{
+         display: flex;
+           justify-content: space-evenly;
+           margin: 4%;
+           border: 2px solid gray;
           border-radius: 10px;
-          margin: 8px;
-          padding: 15px;
-          position: relative;
-          bottom: 2px;
-          max-width: 600px;
-          max-height: 1000px;
-           lightslategrey;
           background-color: black;
           box-shadow: 3px 4px 5px lightslategrey;
-     
+          max-height: 400px;
+         
+       }
+        .aboutq{
+        color: lime;
+          line-height: 2.4;
+          font-family: 'Courier New';
+          font-size: 15px;    
+          }
+          
+        .abouta{
+          color: lime;
+          line-height: 2.4;
+          font-family: 'Courier New';
+          font-size: 15px;
+          
         }
 
              .des {
+       display: flex;
+       margin: 4%;
           border: 2px solid gray;
           border-radius: 10px;
-          margin: 8px;
-          padding: 15px;
-          position: relative;
-          max-width: 600px;
-          max-height: 600px;
            lightslategrey;
           background-color: black;
           box-shadow: 3px 4px 5px lightslategrey;
-          
         }
         
      
@@ -347,28 +312,25 @@ body.dark-theme {
         .lang{
           display: flex;
           flex-wrap: wrap;
-          flex-direction: row;
           position: relative;
-          left: 50%;
-          top: 80px;
-          padding-bottom: 5px;
-          transform: translateX(-50%);
-          background-color: white;
-          width: 90%; 
-          max-width: 600px;
-          max-height: 1000px;
-          border-radius: 8px;
-          box-shadow: 2px 2px 5px lightslategrey;
-          padding: 4px;
-        }
+          justify-content: space-evenly;
+          flex-direction: row;
+          top: 130px;
+         margin: auto;
+       border-radius: 8px;
+       box-shadow: 2px 2px 5px lightslategrey;
+       width: 90%;
+       background-color: white;
+       padding-bottom: 10px;
+       }
         .card{ 
           display: block;
-          margin: 10px auto;
+          margin: 30px auto;
           text-color: black;
           border: 2px solid black;
           border-radius: 8px;
-          width: calc(33.33% - 10px);
-         padding: 5px;
+         width: calc(33.33% - 10px);
+         padding: 15px;
         }
         .card h1{
           text-align: center;
@@ -397,10 +359,7 @@ body.dark-theme {
     <header>
    <div class="navbar" id="navbar">
             <a href="#" id="navtext">KISHAN</a>
-
-            <button id="dark-theme-button" class="themebutton">
-<i id="osm" class="fa-duotone fa-sun fa" style="--fa-primary-color: #ffdd00; --fa-secondary-color: #ffff00;"></i>
-            </button>
+            
     </div>
     </header>
     <main>
@@ -410,13 +369,14 @@ body.dark-theme {
           <h1>PROFILE</h1>
   
           <p>
-           <ion-icon name="person-circle-outline"></ion-icon> KISHAN
+          KISHAN
           </p>
          <h2 id="learn"></h2>
-          
+         
          <img src="IMG_8734.jpeg" alt="myfutu">
          
         <div class="socialcard">
+
           <a href="https://instagram.com/raftaarmusic?igshid=MWZjMTM2ODFkZg==">
                   <ion-icon name="logo-instagram"></ion-icon>
           </a>
@@ -471,7 +431,9 @@ body.dark-theme {
          
            
          </div>
-         
+           <button id="dark-theme-button" class="themebutton">
+<i id="osm" class="fa-duotone fa-sun fa" style="--fa-primary-color: #ffdd00; --fa-secondary-color: #ffff00;"></i>
+            </button>
        </div>
       </main> 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
