@@ -7,13 +7,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <style>
+  *{
+    margin: 0;
+    border: border-box;
+  }
   html, body {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Optional background color */
+    background-color: white; /* Optional background color */
     
 }
 /* Dark theme styles */
@@ -22,7 +28,6 @@ body.dark-theme {
     margin: 0;
     padding: 0;
     background-color: black; /* Optional background color */
-    
 
 }
 
@@ -32,53 +37,62 @@ body.dark-theme {
   }
 }
 */
-
-
       .navbar {
-          position: relative;
-            background-color: darkgrey;
-            max-width: 1000px;
-            height: 50px;
-            padding: 20px;
-            box-shadow: 2px 2px 5px lightslategrey;
-            margin: 0px;
-            
-      }
-
-        .navbar-left {
-            float: left;
-        }
-
-        .navbar-right {
-            float: right;
-        }
-        .navbar a {
-          position: absolute;
-            color: white;
-            text-align: center;
-            padding: 10px 10px;
-            text-decoration: none;
-            font-size: 25px;
-            font-family: 'Fjalla One', sans-serif;
-            text-shadow: 1px 1px 4px black;
-            color: black;
-            max-width: 250px;
-        }
-
-        .navbar button {
-            background-color: gray;
-            color: #ffffff;
-            border: 2px solid black;
-            border-radius: 20px;
-            font-size: 10px;
-            font-weight: bold;
-            box-shadow: 1px 1px 5px black;
-            max-width: 600px;
-            height: 30px;
-            padding: 5px;
+        margin: 0;
             position: relative;
-            right: 15px;
-            top: 10px;
+            display: flex;
+            align-items: center; 
+            width: cover;
+            height: 60px;
+            background-color: black;
+            transition: background-color 0.5s ease; 
+      }
+      .navdark-theme {
+           margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center; 
+            width: cover;
+            height: 60px;
+            background-color: white;
+            transition: background-color 0.5s ease; 
+}
+
+        .navbar a {
+            display: flex;
+            position: relative;
+            left: 20px;
+            top: px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: 'Fjalla One', sans-serif;
+            color: gray;
+            font-size: 60px;
+            text-shadow: 0px 0px 70px lightgray;
+            
+        }
+
+        .themebutton{
+          position: absolute;
+          right: 30px;
+          width: 10px;
+          height: 10px;
+          margin: 0 auto;
+          background-color: transparent;
+          border: 1px solid red;
+          border-radius: 60px;
+          padding: 23px;
+        }
+        .themebutton i {
+          display: flex;
+         position: relative;
+         bottom: 14px;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+         font-size: 30px;
+          margin: 0 auto;
+          color: red;
         }
         
       /*  .mycard {
@@ -110,9 +124,9 @@ body.dark-theme {
   transform: translateX(-50%);
   background-color: white;
   width: 90%; /* Adjust the width as needed */
-  max-width: 600px; /* Set a maximum width */
+ max-width: 600px; 
   max-height: 600px;
-  border-radius: 8px;
+  border-radius: 8px; 
   box-shadow: 2px 2px 5px lightslategrey;
 }
         .mycard p{
@@ -375,32 +389,26 @@ body.dark-theme {
    color: lime;
    font-size: 50px;
  }
+ 
             
   </style>
   <body>
 
     <header>
-   <div class="navbar">
-        <div class="navbar-left">
-            <a href="#" id="ownname">KISHAN</a>
-        </div>
-        <div class="navbar-right">
-      <!--      <select size="1px">
-                <option value="option">SOCIAL</option></option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-            -->
-            <button id="dark-theme-button">Dark Theme</button>
+   <div class="navbar" id="navbar">
+            <a href="#" id="navtext">KISHAN</a>
 
-        </div>
+            <button id="dark-theme-button" class="themebutton">
+<i id="osm" class="fa-duotone fa-sun fa" style="--fa-primary-color: #ffdd00; --fa-secondary-color: #ffff00;"></i>
+            </button>
     </div>
-      </header>
-      <main>
+    </header>
+    <main>
             <div class="main">
          
         <div class="mycard">
           <h1>PROFILE</h1>
+  
           <p>
            <ion-icon name="person-circle-outline"></ion-icon> KISHAN
           </p>
@@ -410,7 +418,7 @@ body.dark-theme {
          
         <div class="socialcard">
           <a href="https://instagram.com/raftaarmusic?igshid=MWZjMTM2ODFkZg==">
-            <ion-icon name="logo-instagram"></ion-icon>
+                  <ion-icon name="logo-instagram"></ion-icon>
           </a>
           <a href="https://github.com/kishan899">
             <ion-icon name="logo-github"></ion-icon>
@@ -420,7 +428,7 @@ body.dark-theme {
           </a>
         </div>
         
-         <!--   <img src="https://discord.c99.nl/widget/theme-2/841319721860988931.png" alt="https://discord.c99.nl/widget/theme-2/841319721860988931.png" class="discordcard"> -->
+
         </div>
         
       <div class="about">

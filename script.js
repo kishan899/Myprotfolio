@@ -46,8 +46,8 @@ const words = [
         }
 
         typeText(words, "typing");
-        let ownname = ["HEY, WELCOME", "I'M KISHAN", "I'M VERY HAPPY TO SEE YOU HERE"]
-        typeText(ownname, "ownname");
+        let ownname = ["KISHAN"]
+        typeText(ownname, "navtext");
 //ytcard 
 function div(he, p, icon){
 let lang = document.getElementById("lang");
@@ -80,19 +80,15 @@ div(lang[i].name, lang[i].info, lang[i].icon)
 // Get references to the button and body elements
 const darkThemeButton = document.getElementById('dark-theme-button');
 const body = document.body;
-
+const navbarcolor = document.getElementById("navbar");
+  const themeicon = document.getElementById("osm");
 // Add a click event listener to the button
 darkThemeButton.addEventListener('click', () => {
-    // Toggle the 'dark-theme' class on the body element
-      var computedStyle = getComputedStyle(body);
-var bodyColor = computedStyle.backgroundColor;
-      if(bodyColor === "rgb(255, 255, 255)"){
-      darkThemeButton.textContent = "White Theme"
-      } else {
-       darkThemeButton.textContent = "Dark Theme"
-      }
+  
     body.classList.toggle('dark-theme');
-    
+    navbarcolor.classList.toggle('navdark-theme');
+   // themeicon.classList.toggle("themedark")
+
     function updateBotInfo() {
       fetch('/api/bot-info')
         .then(response => response.items)
