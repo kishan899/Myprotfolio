@@ -88,17 +88,17 @@ darkThemeButton.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
     navbarcolor.classList.toggle('navdark-theme');
    // themeicon.classList.toggle("themedark")
-
-    function updateBotInfo() {
-      fetch('/api/bot-info')
-        .then(response => response.items)
-        .then((data) => {
-        console.log(data);
-        });
-}
-updateBotInfo();
-
 });
+ function video(){
+    fetch('/api/videos')
+      .then((response) => response.json())
+      .then((videoData) => {
+        console.log(videoData);
+      })   .catch((error) => {
+        console.error(`Error fetching video data: ${error}`);
+      });
+}
+video()
  
 
 
