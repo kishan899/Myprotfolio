@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/kishan899/myprofile.github.io#readme",
   "dependencies": {
-    "youtube-sr": "^4.3.4"
+    "express": "^4.18.2",
+    "youtube-sr": "^4.3.4",
+    "youtubei": "^1.1.2"
   }
 }
