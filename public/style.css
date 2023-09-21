@@ -177,6 +177,7 @@
      }
 
      .mycardleft h1 {
+      font-family: 'Fjalla One', sans-serif;
        width: 100%;
        margin: 8%;
        font-size: 8vw;
@@ -185,11 +186,13 @@
      }
 
      .mycardleft h1 span:nth-child(1) {
+      font-family: 'Fjalla One', sans-serif;
        color: lightseagreen;
        font-size: 7vw;
      }
 
      .mycardleft p {
+       font-family: 'Fjalla One', sans-serif;
        font-size: 3vw;
        color: lightgrey;
        width: 100%;
