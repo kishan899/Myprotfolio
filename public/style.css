@@ -1,0 +1,586 @@
+     * {
+       margin: 0;
+       padding: 0;
+       border: border-box;
+     }
+
+     html,
+     body {
+       height: 100%;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+
+     }
+
+     /* @media only screen and (max-width: 600px) { 
+   body { 
+     background-color: lightblue; 
+   } 
+ } 
+ 
+ */
+     header {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       z-index: 100;
+     }
+
+     main {
+       position: relativeo;
+       margin-top: 8%;
+     }
+
+     .navbar {
+       position: relative;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       height: 8vw;
+       border-bottom: 2px solid #dadada;
+       font-weight: 700;
+       transition: background-color 0.3s ease;
+       z-index: 1000;
+       /* background-color: lightseagreen;*/
+     }
+
+     .navbar a {
+       text-decoration: none;
+       color: white;
+       transition: font-size 0.3s ease-out;
+     }
+
+     .navbartext {
+       font-family: 'Fjalla One', sans-serif;
+       font-size: 6vw;
+       padding-left: 2vw;
+       color: white;
+     }
+
+     .navbaropt {
+       display: flex;
+       padding-right: 3vw;
+       gap: 5vw;
+       font-size: 1.6vw;
+
+     }
+
+     .navbar i {
+       display: none;
+     }
+
+     .navbaropt a:hover {
+       font-size: 3vw;
+     }
+     
+     .menu {
+       display: none;
+       position: fixed;
+       right: 0;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       height: 50vh;
+       background-color: lightseagreen;
+     }
+     .menushow {
+       display: block;
+       position: fixed;
+       right: 0;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       height: 50vh;
+       background-color: lightseagreen;
+       transition: 0.5s;
+     }
+     .menushow a{
+       display: flex;
+       justify-content: center;
+       text-decoration: none;
+       width: 100%;
+       padding: 10% 3% 10%;
+       color: white;
+       font-size: 4vw;
+       font-weight: 1000;
+       border-bottom:2px solid #0E222124;
+       transition: 0.5s;
+     }
+
+
+     @media (max-width: 600px) {
+       main {
+         position: relative;
+         margin-top: 10%;
+       }
+
+       .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         width: 100%;
+         height: 10vw;
+         border-bottom: 1px solid #dadada;
+         font-weight: 700;
+       }
+
+       .navbartext {
+         font-family: 'Fjalla One', sans-serif;
+         font-size: 6vw;
+       }
+
+       .navbaropt {
+         display: none;
+         padding-right: 3vw;
+         gap: 5vw;
+         font-size: 1.6vw;
+       }
+
+
+       .navbar i {
+         display: flex;
+         padding-right: 3vw;
+         font-size: 5vw;
+         color: white;
+
+       }
+
+
+     }
+
+
+     /*NavBar ended*/
+
+     .mycard {
+       display: flex;
+       width: 100%;
+       padding-bottom: 8%;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+
+     }
+
+     .mycardleft {
+       width: 50%;
+
+     }
+
+     .mycardright {
+       width: 50%;
+
+     }
+
+     .mycardleft h1 {
+       width: 100%;
+       margin: 8%;
+       font-size: 8vw;
+       color: whitesmoke;
+
+     }
+
+     .mycardleft h1 span:nth-child(1) {
+       color: lightseagreen;
+       font-size: 7vw;
+     }
+
+     .mycardleft p {
+       font-size: 3vw;
+       color: lightgrey;
+       width: 100%;
+       margin: 7%;
+       font-weight: 150;
+
+     }
+
+
+     .mycardright img {
+       position: relative;
+       margin: 10%;
+       width: 80%;
+       height: 80%;
+       border-radius: 8px;
+     }
+
+     .mycard a {
+       color: white;
+       background-color: lightseagreen;
+       font-size: 1.2vw;
+       padding: 1.1vw 2.1vw;
+       margin-left: 8%;
+       border: none;
+       border-radius: 5px;
+       font-weight: 500;
+       text-decoration: none;
+     }
+
+     /*MYCARD IS ENDED*/
+     .aboutme {
+       width: 100%;
+       justify-content: space-between;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+     }
+
+     .aboutinfo {
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+     }
+
+     .infoleft {
+       padding: 10%;
+       color: lightseagreen;
+       font-size: 3vw;
+       line-height: 2.5;
+       width: 50%;
+       font-weight: 700;
+     }
+
+     .inforight {
+       padding: 9%;
+       color: lightseagreen;
+       font-size: 2.7vw;
+       line-height: 2.9;
+       width: 60%;
+       list-style-type: none;
+       font-weight: 400;
+     }
+
+     .infodes {
+       position: relative;
+       font-size: 2.5vw;
+       color: lightseagreen;
+       padding: 8%;
+       font-weight: 350;
+       margin-top: -10vw;
+       transition: padding 0.2s ease-in-out;
+     }
+
+     .infodes:hover {
+       font-weight: 400;
+     }
+
+     /*ABOUT ENDED Statics STARTED*/
+     .skills {
+       position: relative;
+       display: flex;
+       flex-wrap: wrap;
+       width: 100%;
+       justify-content: center;
+       align-items: center;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+     }
+
+     .skills h2 {
+       position: absolute;
+       top: 0px;
+       padding: 2%;
+       margin-bottom: 3%;
+       color: #40FFE3;
+       font-size: 5vw;
+     }
+
+     .skillscardfront {
+       flex-grow: 1;
+       color: white;
+       border: 2px solid lightseagreen;
+       width: 20%;
+       height: 5%;
+       padding: 4%;
+       margin: 10% 1.5vw;
+       border-radius: 7px;
+       transition: flex-grow 0.5s ease;
+       transition: box-shadow 0.7s ease;
+       transition: margin 0.8s ease;
+       transition: padding 0;
+     }
+
+     .skillscardfront i {
+       margin: 15%;
+       font-size: 15vw;
+     }
+
+     .skillscardfront h1 {
+       font-size: 3.5vw;
+       text-align: center;
+     }
+
+     .skills .skillscardfront:nth-child(2) i {
+       color: #e34c26;
+
+     }
+
+     .skills .skillscardfront:nth-child(3) i {
+       color: #264de4;
+
+     }
+
+     .skills .skillscardfront:nth-child(4) i {
+       color: #F0DB4F;
+
+     }
+
+     .skills .skillscardfront:hover {
+       box-shadow: 0 0 30px rgba(64, 255, 227, 0.5);
+       flex-grow: 5;
+       padding: 5%;
+       margin: 12% 1.7vw;
+     }
+
+     /*Skills card ended and project card started*/
+     .project {
+       position: relative;
+       display: flex;
+       flex-wrap: wrap;
+       width: 100%;
+       justify-content: center;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+
+     }
+
+     .project h2 {
+       color: #40FFE3;
+       font-size: 5vw;
+       text-align: center;
+       margin: 7%;
+     }
+
+     .projectcard {
+       position: relative;
+       display: flex;
+       color: white;
+       border: 2px solid lightseagreen;
+       width: 60%;
+       margin: 6%;
+       border-radius: 7px;
+       background-color: #01010152;
+     }
+
+     .projectcard .card1 {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       justify-content: center;
+       align-items: center;
+       padding: 4%;
+       width: 100%;
+       border-radius: 8px;
+       transform: scale(1);
+       transition: transform 0.5s, display 1s;
+
+     }
+
+     .projectcard .card1 img {
+       width: 35vw;
+       height: 35vw;
+       border-radius: 8px;
+       margin-top: 10%;
+     }
+
+     .card1 h1 {
+       text-align: center;
+       color: #CCFFF8;
+       justify-content: center;
+       font-size: 8vw;
+       margin: 5%;
+     }
+
+     .projectcard .card1 a {
+       text-decoration: none;
+     }
+
+     .projectcard .card2 {
+       position: relative;
+       display: none;
+       flex-direction: column;
+       justify-content: flex-end;
+       align-items: center;
+       width: 100%;
+       padding: 5%;
+       border-radius: cover;
+       background-color: #40FFE382;
+       transform: scale(0.9);
+       transition: transform 1s, display 1s 0.5s;
+
+     }
+
+     .projectcard .card2 a {
+       text-decoration: none;
+     }
+
+     .projectcard .card2 p {
+       padding: 5%;
+       font-size: 4vw;
+     }
+
+     .projectcard .card2 a {
+       display: flex;
+       position: relative;
+       top: 0;
+       padding: 4%;
+       justify-content: center;
+       width: 30%;
+       color: white;
+       background-color: lightseagreen;
+       font-size: 4vw;
+       border: none;
+       border-radius: 5px;
+       font-weight: 500;
+     }
+
+     .projectcard:hover .card1 {
+       display: none;
+     }
+
+     .projectcard:hover .card2 {
+       display: flex;
+       transform: scale(1);
+       transition: transform 1s, display 1s;
+     }
+
+     .projectcard:hover {
+       box-shadow: 0 0 20px #40FFE3B8;
+     }
+
+     .socialcard {
+       position: relative;
+       display: flex;
+       flex-wrap: wrap;
+       width: 100%;
+       justify-content: center;
+       align-items: center;
+       background: rgb(0, 0, 0);
+       background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
+    
+     }
+
+     .socialcard h1 {
+       top: 0px;
+       padding: 2%;
+       margin-left: 50%;
+       margin-right: 50%;
+       color: #40FFE3;
+       font-size: 5vw;
+       justify-content: center;
+       
+     }
+
+     .socialcard a {
+       display: flex;
+       flex-grow: 5%;
+       color: white;
+       border: 2px solid lightseagreen;
+       padding: 7%;
+       margin: 3%;
+       font-size: 25vw;
+       border-radius: 7px;
+       transition: flex-grow 0.4s ease-out;
+       transition: box-shadow 0.4s ease-out;
+       transition: margin 0.4s ease-out;
+       transition: padding 0.4s ease-out;
+     }
+     .socialcard ion-icon{
+       justify-content: center;
+     }
+
+     .socialcard a:nth-child(2) {
+       color: red;
+       animation: bounce 1s infinite;
+     }
+
+     .socialcard a:nth-child(3) {
+       color: black;
+       animation: bounce 2s infinite;
+
+     }
+
+     .socialcard a:nth-child(4) {
+       color: cornflowerblue;
+       animation: bounce 3s infinite;
+
+     }
+     .socialcard a:nth-child(5) {
+        color: #FF7224;
+       animation: bounce 3s infinite;
+
+     }
+     .socialcard a:nth-child(6) {
+        color: #FF0000;
+       animation: bounce 3s infinite;
+
+     }
+     .socialcard a:hover {
+       flex-grow: 10;
+       padding: 7%;
+       margin: 4%;
+       background-color: #0000004F;
+       box-shadow: 0 0 30px rgba(64, 255, 227, 0.5);
+       justify-content: center;
+     }
+
+     @keyframes bounce {
+
+       0%,
+       100% {
+         transform: translateY(0);
+       }
+
+       50% {
+         transform: translateY(-5px);
+       }
+     }
+     footer{
+     display: flex;
+   text-align: center;
+    background-color: lightseagreen;
+    height: 7vw;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+     }
+ .footertext { 
+   display: flex;
+   position: relative;
+     color: white;
+     font-size: 2vw;
+     align-items: center;
+     }
+
+    .footertext a:nth-child(2){
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+       position: absolute;
+      left: -60%;
+      font-size: 5vw;
+      color: #7289da;
+      text-shadow: 2px 2px 5px black;
+    }
+    .footertext a:nth-child(3){
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+       position: absolute;
+      left: -40%;
+      font-size: 5vw;
+      color: #FF0000;
+      text-shadow: 2px 2px 5px black;
+    }
+    .footertext a:nth-child(4){
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+       position: absolute;
+      right: -60%;
+      font-size: 5vw;
+      font-weight: 800;
+      color: floralwhite;
+      text-shadow: 2px 2px 5px black;
+    }
