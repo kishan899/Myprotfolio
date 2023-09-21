@@ -292,6 +292,7 @@
        padding: 2%;
        margin-bottom: 3%;
        color: #40FFE3;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 5vw;
      }
 
@@ -316,6 +317,7 @@
      }
 
      .skillscardfront h1 {
+       font-family: 'Fjalla One', sans-serif;
        font-size: 3.5vw;
        text-align: center;
      }
@@ -356,6 +358,7 @@
 
      .project h2 {
        color: #40FFE3;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 5vw;
        text-align: center;
        margin: 7%;
@@ -397,6 +400,7 @@
        text-align: center;
        color: #CCFFF8;
        justify-content: center;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 8vw;
        margin: 5%;
      }
@@ -426,6 +430,7 @@
 
      .projectcard .card2 p {
        padding: 5%;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 4vw;
      }
 
@@ -438,6 +443,7 @@
        width: 30%;
        color: white;
        background-color: lightseagreen;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 4vw;
        border: none;
        border-radius: 5px;
@@ -476,6 +482,7 @@
        margin-left: 50%;
        margin-right: 50%;
        color: #40FFE3;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 5vw;
        justify-content: center;
        
@@ -488,6 +495,7 @@
        border: 2px solid lightseagreen;
        padding: 7%;
        margin: 3%;
+       font-family: 'Fjalla One', sans-serif;
        font-size: 25vw;
        border-radius: 7px;
        transition: flex-grow 0.4s ease-out;
@@ -558,6 +566,7 @@
    display: flex;
    position: relative;
      color: white;
+     font-family: 'Fjalla One', sans-serif;
      font-size: 2vw;
      align-items: center;
      }
