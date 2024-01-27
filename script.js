@@ -45,28 +45,3 @@ const icon = document.querySelector(".navbar i");
 
 
 
- /*function data() {
-  fetch("/getVideoTitles")
-    .then((response) => response.json())
-    .then((data) => {
-      let ytcard = document.getElementById('yt');
-      let videoscard = document.createElement("div")
-      let img = document.createElement("img");
-      let title = document.createElement("h1");
-      img.setAttribute("src", data[0].thumbnail);
-      title.textContent = data[0].title;
-   videoscard.classList.add("card", "boxshadow", "textshadow");   
-      videoscard.appendChild(img);
-      videoscard.appendChild(title);
-      ytcard.appendChild(videoscard)
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
- }       
-data()*/
-
-
-
-  
