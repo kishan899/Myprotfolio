@@ -1,13 +1,13 @@
      * {
        margin: 0;
        padding: 0;
-       border: border-box;
+       box-sizing: border-box;
      }
 
      html,
      body {
-       height: 100%;
-       width: 100%;
+       height: 100vh;
+       width: 100vw;
        margin: 0;
        padding: 0;
        background: rgb(0, 0, 0);
@@ -15,13 +15,6 @@
 
      }
 
-     /* @media only screen and (max-width: 600px) { 
-   body { 
-     background-color: lightblue; 
-   } 
- } 
- 
- */
      header {
        position: fixed;
        top: 0;
@@ -78,7 +71,7 @@
      .navbaropt a:hover {
        font-size: 2.3vw;
      }
-     
+
      .menu {
        display: none;
        position: fixed;
@@ -89,6 +82,7 @@
        height: 50vh;
        background-color: lightseagreen;
      }
+
      .menushow {
        display: block;
        position: fixed;
@@ -100,7 +94,8 @@
        background-color: lightseagreen;
        transition: 0.5s;
      }
-     .menushow a{
+
+     .menushow a {
        display: flex;
        justify-content: center;
        text-decoration: none;
@@ -110,7 +105,7 @@
        font-size: 3vw;
        font-family: 'Fjalla One', sans-serif;
        font-weight: 1000;
-       border-bottom:2px solid #0E222124;
+       border-bottom: 2px solid #0E222124;
        transition: 0.5s;
      }
 
@@ -178,7 +173,7 @@
      }
 
      .mycardleft h1 {
-      font-family: 'Fjalla One', sans-serif;
+       font-family: 'Fjalla One', sans-serif;
        width: 100%;
        margin: 8%;
        font-size: 6vw;
@@ -187,7 +182,7 @@
      }
 
      .mycardleft h1 span:nth-child(1) {
-      font-family: 'Fjalla One', sans-serif;
+       font-family: 'Fjalla One', sans-serif;
        color: lightseagreen;
        font-size: 5vw;
      }
@@ -226,8 +221,11 @@
 
      /*MYCARD IS ENDED*/
      .aboutme {
+       display: flex;
+       flex-direction: column;
        width: 100%;
-       justify-content: space-between;
+       justify-content: center;
+       align-items: center;
        background: rgb(0, 0, 0);
        background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
      }
@@ -236,24 +234,28 @@
        display: flex;
        width: 100%;
        justify-content: space-between;
+       align-items: center;
+       padding: 20px;
      }
 
      .infoleft {
-       padding: 10%;
+       padding: 10px;
        color: lightseagreen;
        font-family: 'Fjalla One', sans-serif;
        font-size: 2.5vw;
        line-height: 2.5;
        width: 50%;
+       text-align: left;
        font-weight: 700;
      }
 
      .inforight {
-       padding: 9%;
+       padding: 10px;
        color: lightseagreen;
        font-size: 2.2vw;
        line-height: 2.9;
-       width: 60%;
+       width: 50%;
+       text-align: left;
        list-style-type: none;
        font-family: 'Fjalla One', sans-serif;
        font-weight: 400;
@@ -287,28 +289,28 @@
      }
 
      .skills h2 {
-       position: absolute;
-       top: 0px;
-       padding: 2%;
-       margin-bottom: 3%;
+       margin-top: 10px;
+       width: 100%;
+       text-align: center;
        color: #40FFE3;
        font-family: 'Fjalla One', sans-serif;
        font-size: 4vw;
      }
 
      .skillscardfront {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
        flex-grow: 1;
        color: white;
        border: 2px solid lightseagreen;
-       width: 20%;
-       height: 5%;
-       padding: 4%;
-       margin: 10% 1.5vw;
+       width: 100px;
+       margin: 10px;
+       padding: 10px;
        border-radius: 7px;
-       transition: flex-grow 0.5s ease;
-       transition: box-shadow 0.7s ease;
-       transition: margin 0.8s ease;
-       transition: padding 0;
+       transition: all 0.5s ease;
+    
      }
 
      .skillscardfront i {
@@ -338,9 +340,32 @@
 
      }
 
+     .skills .skillscardfront:nth-child(5) i {
+       color: #68a063;
+
+     }
+
+     .skills .skillscardfront:nth-child(6) i {
+       color: #F0DB4F;
+
+     }
+
+     .skills .skillscardfront:nth-child(7) i {
+       color: #4db33d;
+
+     }
+
+     .skills .skillscardfront:nth-child(8) i {
+       color: #68a063;
+
+     }
+     .skills .skillscardfront:nth-child(9) i {
+       color: #07F5FF;
+
+     }
      .skills .skillscardfront:hover {
        box-shadow: 0 0 30px rgba(64, 255, 227, 0.5);
-       flex-grow: 5;
+       flex-grow: 2;
        padding: 5%;
        margin: 12% 1.7vw;
      }
@@ -479,7 +504,7 @@
        align-items: center;
        background: rgb(0, 0, 0);
        background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(61, 64, 81, 1) 85%);
-    
+
      }
 
      .socialcard h1 {
@@ -491,7 +516,7 @@
        font-family: 'Fjalla One', sans-serif;
        font-size: 4vw;
        justify-content: center;
-       
+
      }
 
      .socialcard a {
@@ -510,7 +535,8 @@
        transition: margin 0.4s ease-out;
        transition: padding 0.4s ease-out;
      }
-     .socialcard ion-icon{
+
+     .socialcard ion-icon {
        justify-content: center;
      }
 
@@ -530,16 +556,19 @@
        animation: bounce 3s infinite;
 
      }
+
      .socialcard a:nth-child(5) {
-        color: #FF7224;
+       color: #FF7224;
        animation: bounce 3s infinite;
 
      }
+
      .socialcard a:nth-child(6) {
-        color: #FF0000;
+       color: #FF0000;
        animation: bounce 3s infinite;
 
      }
+
      .socialcard a:hover {
        flex-grow: 10;
        font-size: 15vw;
@@ -559,52 +588,56 @@
          transform: translateY(-5px);
        }
      }
-     footer{
-     display: flex;
-   text-align: center;
-    background-color: lightseagreen;
-    height: 7vw;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-     }
- .footertext { 
-   display: flex;
-   position: relative;
-     color: white;
-     font-family: 'Fjalla One', sans-serif;
-     font-size: 2vw;
-     align-items: center;
+
+     footer {
+       display: flex;
+       text-align: center;
+       background-color: lightseagreen;
+       height: 7vw;
+       width: 100%;
+       justify-content: center;
+       align-items: center;
      }
 
-    .footertext a:nth-child(2){
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+     .footertext {
+       display: flex;
+       position: relative;
+       color: white;
+       font-family: 'Fjalla One', sans-serif;
+       font-size: 2vw;
+       align-items: center;
+     }
+
+     .footertext a:nth-child(2) {
+       display: flex;
+       align-items: center;
+       text-decoration: none;
        position: absolute;
-      left: -60%;
-      font-size: 5vw;
-      color: #7289da;
-      text-shadow: 2px 2px 5px black;
-    }
-    .footertext a:nth-child(3){
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+       left: -60%;
+       font-size: 5vw;
+       color: #7289da;
+       text-shadow: 2px 2px 5px black;
+     }
+
+     .footertext a:nth-child(3) {
+       display: flex;
+       align-items: center;
+       text-decoration: none;
        position: absolute;
-      left: -40%;
-      font-size: 5vw;
-      color: #FF0000;
-      text-shadow: 2px 2px 5px black;
-    }
-    .footertext a:nth-child(4){
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+       left: -40%;
+       font-size: 5vw;
+       color: #FF0000;
+       text-shadow: 2px 2px 5px black;
+     }
+
+     .footertext a:nth-child(4) {
+       display: flex;
+       align-items: center;
+       text-decoration: none;
        position: absolute;
-      right: -60%;
-      font-size: 5vw;
-      font-weight: 800;
-      color: floralwhite;
-      text-shadow: 2px 2px 5px black;
-    }
+       right: -60%;
+       font-size: 5vw;
+       font-weight: 800;
+       color: floralwhite;
+       text-shadow: 2px 2px 5px black;
+     }
